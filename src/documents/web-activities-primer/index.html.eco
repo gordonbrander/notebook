@@ -3,7 +3,7 @@ layout: 'default'
 title: 'Web Activities'
 ---
 
-<% for document in @getDocumentsMatchingUrl('/slides'): %>
+<% for document in @getDocumentsMatchingUrl('/web-activities-primer', 'index'): %>
   <article class="<%= @classname(document.classname, 'slide') %>">
     <div class="in"><%- document.contentRenderedWithoutLayouts %></div>
   </article>
