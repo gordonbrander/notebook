@@ -34,7 +34,9 @@ Or via JavaScript (this approach is still in development):
         filters: {
             type: "image/png"
         }     
-    });          register.onerror = function () {
+    }); 
+    
+    register.onerror = function () {
         console.log("Failed to register activity");
     }
 

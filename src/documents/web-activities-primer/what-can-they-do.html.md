@@ -3,7 +3,7 @@ classname: 'slide-content slide-type-1'
 order: '1.5'
 ---
 
-What can I do with web activities?
+What can I do with Web Activities?
 ==================================
 
 Lots of things. Here's an initial list:
