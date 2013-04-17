@@ -1,0 +1,11 @@
+---
+layout: 'default'
+title: 'Web Activities'
+---
+
+<% for document in @getDocumentsMatchingUrl('/slides'): %>
+  <article class="<%= @classname(document.classname, 'slide') %>">
+    <div class="in"><%- document.contentRenderedWithoutLayouts %></div>
+  </article>
+<% end %>
+
