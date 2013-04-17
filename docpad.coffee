@@ -1,5 +1,7 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
+url = "http://gordonbrander.github.io/notebook"
+
 docpadConfig = {
 
   # =================================
@@ -12,12 +14,10 @@ docpadConfig = {
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: url
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
-        'www.website.com',
-        'website.herokuapp.com'
       ]
 
       # The default title of our website
@@ -35,16 +35,13 @@ docpadConfig = {
 
       # The website's styles
       styles: [
-        '/vendor/normalize.css'
-        '/vendor/h5bp.css'
-        '/styles/style.css'
+        url + '/vendor/normalize.css'
+        url + '/vendor/h5bp.css'
+        url + '/styles/style.css'
       ]
 
       # The website's scripts
       scripts: [
-        '/vendor/log.js'
-        '/vendor/modernizr.js'
-        '/scripts/script.js'
       ]
 
 
