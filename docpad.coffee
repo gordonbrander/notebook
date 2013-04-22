@@ -2,6 +2,9 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 url = "http://gordonbrander.github.io/notebook"
 
+prependAll = (strings, prepend) ->
+  if strings? then strings.map((string) -> prepend + string) else []
+
 docpadConfig = {
 
   # =================================
@@ -83,6 +86,8 @@ docpadConfig = {
       classesReducer = (accumulated, classname) ->
         accumulated = if typeof classname is 'string' then accumulated.concat(classname.trim().split(' ')) else accumulated
       classnamestrings.reduce(classesReducer, []).join(' ')
+
+    prependAll: prependAll
 
   # =================================
   # DocPad Events
