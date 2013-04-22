@@ -1,0 +1,13 @@
+.chapter
+  border-bottom 1px solid #ccc
+  padding 48px 0 36px
+
+.chapter .header
+  margin-bottom 12px
+
+.chapter .content
+  margin-bottom: 12px
+
+.pullquote
+  font-size 24px
+  line-height 32px
