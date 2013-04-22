@@ -38,7 +38,8 @@
     "docpad-plugin-partials": "2.x",
     "docpad-plugin-stylus": "2.x",
     "docpad-plugin-text": "2.x",
-    "docpad-plugin-ghpages": "~2.0.2"
+    "docpad-plugin-ghpages": "~2.0.2",
+    "docpad-plugin-jade": "~2.3.1"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"
