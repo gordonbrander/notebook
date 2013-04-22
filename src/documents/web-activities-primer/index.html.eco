@@ -1,6 +1,9 @@
 ---
 layout: 'default'
 title: 'Web Activities'
+styles:
+  - '/styles/h5bp.css'
+  - '/styles/web-activities-primer.css'
 ---
 
 <% for document in @getDocumentsMatchingUrl('/web-activities-primer', 'index'): %>
