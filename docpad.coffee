@@ -2,7 +2,7 @@
 # It is simply a CoffeeScript Object which is parsed by CSON
 ENVIRONMENT = 'production';
 
-if ENVIRONMENT == 'production'
+if ENVIRONMENT == 'local'
   url = "http://gordonbrander.github.io/notebook"
 else
   url = ''
