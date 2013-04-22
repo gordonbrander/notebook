@@ -1,6 +1,11 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
-url = "http://gordonbrander.github.io/notebook"
+ENVIRONMENT = 'production';
+
+if ENVIRONMENT == 'production'
+  url = "http://gordonbrander.github.io/notebook"
+else
+  url = ''
 
 prependAll = (strings, prepend) ->
   if strings? then strings.map((string) -> prepend + string) else []
@@ -39,7 +44,6 @@ docpadConfig = {
       # The website's styles
       styles: [
         url + '/vendor/normalize.css'
-        url + '/vendor/h5bp.css'
       ]
 
       # The website's scripts
