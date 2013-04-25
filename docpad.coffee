@@ -1,14 +1,35 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
-ENVIRONMENT = 'production';
+ENVIRONMENT = 'locl';
 
 if ENVIRONMENT == 'production'
   url = "http://gordonbrander.github.io/notebook"
 else
   url = ''
 
-prependAll = (strings, prepend) ->
-  if strings? then strings.map((string) -> prepend + string) else []
+asArray = (thing) ->
+  """Box `thing` as an array unless already an array"""
+  if (thing instanceof Array) then thing else if thing? then [thing] else []
+
+items = (object) ->
+  """For an object, get an array of 2-arrays containing key and value for every
+  property of the object.
+  Only considers own iterable properties."""
+  keys = Object.keys(object)
+  keys.map((key) -> [key, object[key]])
+
+replaceStringViaPair = (string, pair) ->
+  string.replace(pair[0], pair[1])
+
+replaceAll = (strings, replacements) ->
+  strings = asArray(strings)
+  replacements = asArray(replacements)
+  strings.map((string) -> replacements.reduce(replaceStringViaPair, string))
+
+sortReverseChronological = (a, b) ->
+  timestampA = new Date(a.date).valueOf()
+  timestampB = new Date(b.date).valueOf()
+  if timestampA < timestampB then 1 else if timestampA > timestampB then -1 else 0;
 
 docpadConfig = {
 
@@ -75,22 +96,21 @@ docpadConfig = {
       # Merge the document keywords with the site keywords
       @site.keywords.concat(@document.keywords or []).join(', ')
 
-    getDocumentsMatchingUrl: (matching, excluding) ->
+    getDocumentsMatchingUrl: (matching, excluding, sortBy) ->
       # Get all documents from the posts directory
-      @getCollection('documents').toJSON().filter((document) ->
+      documents = @getCollection('documents').toJSON().filter((document) ->
         url = document.url
         matches = url.search(matching) isnt -1
         isMatch = if matching and excluding then matches and (url.search(excluding) is -1) else matches
-      ).sort((a, b) ->
-        if a.order > b.order then 1 else if b.order > a.order then -1 else 0
       )
+      documents.sort(if sortBy? then sortBy else sortReverseChronological)
 
     classname: (classnamestrings...) ->
       classesReducer = (accumulated, classname) ->
         accumulated = if typeof classname is 'string' then accumulated.concat(classname.trim().split(' ')) else accumulated
       classnamestrings.reduce(classesReducer, []).join(' ')
 
-    prependAll: prependAll
+    replaceAll: replaceAll
 
   # =================================
   # DocPad Events
