@@ -1,0 +1,16 @@
+---
+title: "Color"
+layout: "default"
+styles:
+  - './index.css'
+---
+<% for document in @getDocumentsMatchingUrl('/color', '/color/index'): %>
+  <article class="<%= @classname(document.classname, 'colorscheme') %>">
+  	<ul>
+		<% for color in document.colors: %>
+  		<li style="background: <%= color %>; width: <%= 100 / document.colors.length %>%;"><%= color %></li>
+		<% end %>
+  	</ul>
+    <%- document.contentRenderedWithoutLayouts %>
+  </article>
+<% end %>

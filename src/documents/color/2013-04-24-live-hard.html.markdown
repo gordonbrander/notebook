@@ -1,0 +1,7 @@
+---
+title: "Live Hard"
+colors:
+  - '#e9d7b2'
+  - '#f03e3e'
+  - '#b53134'
+---

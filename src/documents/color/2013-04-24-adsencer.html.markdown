@@ -1,0 +1,7 @@
+---
+title: "Adsencer"
+colors:
+  - '#2eb8d4'
+  - '#e950ab'
+  - '#554687'
+---
