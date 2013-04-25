@@ -1,6 +1,6 @@
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
-ENVIRONMENT = 'locl';
+ENVIRONMENT = 'production';
 
 if ENVIRONMENT == 'production'
   url = "http://gordonbrander.github.io/notebook"
