@@ -1,5 +1,6 @@
 ---
 title: "Daddy Warbucks"
+source: 'http://dribbble.com/shots/1045472-Daddy-Warbucks?list=popular&offset=2'
 colors:
   - '#004258'
   - '#8ab5ae'
@@ -7,6 +8,4 @@ colors:
   - '#88ae57'
   - '#a52c31'
   - '#f48864'
-
-url: 'http://dribbble.com/shots/1045472-Daddy-Warbucks?list=popular&offset=2'
 ---
