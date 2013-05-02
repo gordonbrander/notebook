@@ -1,0 +1,56 @@
+---
+title: 'Spring physics explorations'
+layout: 'default'
+styles:
+  - './demo/demo.css'
+scripts:
+  - './spring/spring.js'
+  - './demo/demo.js'
+---
+<section id="demo-1" class="demo">
+  <aside class="demo-intro">
+    <h1>Basic spring</h1>
+    Click anywhere within the field. The blue box will jump to your mouse position,
+    then spring back.
+  </aside>
+  <div id="demo-1-particle"></div>
+</section>
+<section id="demo-2" class="demo" style="position: static;">
+  <aside class="demo-intro">
+    <h1>Popover</h1>
+    <p>Click anywhere to open popover under mouse</p>
+  </aside>
+  <div id="demo-2-popover" class="popover">
+    <ul class="popover-items">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+</section>
+<section id="demo-3" class="demo">
+  <aside class="demo-intro">
+    <h1>Sheet drag-snap</h1>
+    <p>Click-and-drag the sheet, then release to see it snap back into place.</p>
+  </aside>
+  <div class="sheets">
+    <section class="sheet">
+      <img class="nopointer" src="demo/sheet-0.png" width="320" height="480">
+    </section>
+    <section class="sheet noselect" id="demo-3-sheet">
+      <img class="nopointer" src="demo/sheet-1.png" width="320" height="480">
+    </section>
+  </div>
+</section>
+<section id="demo-4" class="demo" style="position: static;">
+  <aside class="demo-intro">
+    <h1>Radial menus</h1>
+    <p>Click anywhere to open popover under mouse.</p>
+  </aside>
+
+  <ul id="demo-4-radial" class="radial">
+    <li class="radial-icon-star"></li>
+    <li class="radial-icon-refresh"></li>
+    <li class="radial-icon-share"></li>
+  </ul>
+</section>
