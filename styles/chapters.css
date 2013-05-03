@@ -1,0 +1,9 @@
+html{font-size:18px;line-height:32px}
+.chapter{background:#e5e5e5;min-height:800px}
+.chapter:nth-child(even){background:#fff}
+.chapter > .in{padding:48px 0 36px}
+.chapter .header{margin-bottom:12px}
+.chapter .content{margin-bottom:12px}
+.pullquote{font-size:24px;line-height:32px}
+.poster{overflow:hidden;width:100%}
+.poster img{max-width:none;width:100%}

@@ -1,0 +1,25 @@
+<h1>How do I call web activities from my app?</h1>
+<p>Let’s say you have an app that needs to get a picture – either from the Gallery, Camera or any other app in Firefox OS that supports that activity. To get one, you can call the pick activity, like this:</p>
+<pre><code>var pick = new MozActivity({
+   name: &quot;pick&quot;,
+   data: {
+       type: [&quot;image/png&quot;, &quot;image/jpg&quot;, &quot;image/jpeg&quot;]
+   }
+});</code></pre>
+<p>We specify the name <code>pick</code> and the data to be PNG or JPEG images.</p>
+<p>As a user, you choose the app you want to pick an image from. Once you’ve done so, the result will be posted back to the requesting app (Note: the app handling the activity chooses what will be returned).</p>
+<p>Like most WebAPIs, a Web Activity has onsuccess and onerror event handlers. In the case of an image/file the <code>onsuccess</code> handler gets a blob. It can then represent the returned image visually in the app:</p>
+<pre><code>pick.onsuccess = function () {    
+    // Create image and set the returned blob as the src
+    var img = document.createElement(&quot;img&quot;);
+    img.src = window.URL.createObjectURL(this.result.blob);
+
+    // Present that image in your app
+    var imagePresenter = document.querySelector(&quot;#image-presenter&quot;);
+    imagePresenter.appendChild(img);
+};
+
+pick.onerror = function () {
+    // If an error occurred or the user canceled the activity
+    alert(&quot;Can&#39;t view the image!&quot;);
+};</code></pre>

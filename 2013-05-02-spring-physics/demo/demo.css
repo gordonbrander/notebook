@@ -1,0 +1,168 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+body {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+ul {
+  padding-left: 24px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+.header {
+  background: #cc4e3f;
+  color: #fff;
+  height: 600px;
+}
+.header > h1 {
+  margin: 20px;
+  position: absolute;
+}
+
+.forward {
+  background: #E8EEEE;
+  color: #555;
+  height: 560px;
+  padding: 20px;
+}
+.forward h1 {
+  margin: 0 0 12px;
+}
+.forward > p,
+.forward > ul {
+  margin: 0 0 6px;
+  width: 300px;
+}
+
+.demo {
+  background: #222;
+  height: 600px;
+  position: relative;
+}
+.demo:nth-child(even) {
+  background: #292929;
+}
+
+.demo-intro {
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+}
+
+.demo-intro h1,
+.demo-intro p {
+  margin: 0 0 6px;
+}
+
+.demo-intro h1 {
+  font-size: 12px;
+}
+
+.nopointer {
+  /* Used for static image screens we don't implement in CSS. We don't want
+  them to be clickable or draggable. */
+  pointer-events: none;
+}
+
+.noselect {
+ -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+#demo-1-particle {
+  background: dodgerblue;
+  left: 0;
+  position: absolute;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+}
+
+.popover {
+  background: url(popover.png) 0 0 no-repeat;
+  height: 300px;
+  width: 300px;
+  opacity: 0;
+  position: fixed;
+  transform-origin: center top;
+  transition: opacity 200ms linear; /* Standard */
+  z-index: 2;
+}
+
+.popover-items {
+  border-radius: 5px;
+  list-style: none;
+  margin: 25px 15px 15px;
+  overflow: hidden;
+  padding: 0;
+}
+.popover-items > li {
+  background: #ddd;
+  height: 50px;
+  line-height: 50px;
+  margin: 1px 0;
+  padding: 0 10px;
+}
+
+/* Demo 3
+----------------------------------------------------------------------------- */
+
+.sheet {
+  background: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  border-radius: 3px;
+  height: 480px;
+  left: 0;
+  margin-top: -240px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 320px;
+}
+
+/* Demo 4
+----------------------------------------------------------------------------- */
+
+.radial {
+  height: 102px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 169px;
+}
+
+.radial-icon-star,
+.radial-icon-refresh,
+.radial-icon-share {
+  display: block;
+  height: 55px;
+  position: absolute;
+  width: 55px;
+}
+.radial-icon-star {
+  background: url(radial-star.png) 0 0 no-repeat;
+  left: 56px;
+  top: 0;
+}
+.radial-icon-refresh {
+  background: url(radial-refresh.png) 0 0 no-repeat;
+  bottom: 0;
+  left: 0;
+}
+.radial-icon-share {
+  background: url(radial-share.png) 0 0 no-repeat;
+  bottom: 0;
+  right: 0;
+}

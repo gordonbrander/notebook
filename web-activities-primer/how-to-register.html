@@ -1,0 +1,37 @@
+<h1>How do I register an app to handle an activity?</h1>
+<p>There are two ways.</p>
+<p>Declaratively, through the manifest file:</p>
+<pre><code>{
+    &quot;name&quot;: &quot;My App&quot;,
+    &quot;description&quot;: &quot;Doing stuff&quot;,
+    &quot;activities&quot;: {
+       &quot;view&quot;: {
+            &quot;filters&quot;: {
+                &quot;type&quot;: &quot;url&quot;,
+                &quot;url&quot;: {
+                    &quot;required&quot;: true, 
+                    &quot;regexp&quot;:&quot;/^https?:/&quot;
+                }
+            }
+        }
+    }
+}</code></pre>
+<p>Or via JavaScript (this approach is still in development):</p>
+<pre><code>var register = navigator.mozRegisterActivityHandler({
+    name: &quot;view&quot;, 
+    disposition: &quot;inline&quot;, 
+    filters: {
+        type: &quot;image/png&quot;
+    } 
+}); 
+
+register.onerror = function () {
+    console.log(&quot;Failed to register activity&quot;);
+}</code></pre>
+<p>...and then handle the activity:</p>
+<pre><code>navigator.mozSetMessageHandler(&quot;activity&quot;, function (a) {
+    /*
+      Call a.postResult() or a.postError() if
+      the activity should return a value    
+    */
+});</code></pre>

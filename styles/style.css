@@ -1,0 +1,79 @@
+html {
+  background: #dedede;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+p,
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 100;
+  line-height: 1.25;
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 6px;
+}
+
+code {
+  background: #dedede;
+  color: #333;
+}
+
+pre code {
+  display: block;
+  border-radius: 3px;
+  margin: 24px 0;
+  padding: 24px;
+}
+
+.slides {
+  overflow: hidden;
+}
+
+.slide {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .25);
+  margin: 40px auto;
+  min-height: 720px;
+  overflow: hidden;
+  width: 1280px;
+}
+
+/* Slide types
+----------------------------------------------------------------------------- */
+
+.slide-content {
+  font-size: 18px;
+}
+
+.slide-type-1 > .in {
+  margin: 0 80px 60px;
+  padding-top: 60px;
+}
+
+.slide-content p,
+.slide-content ul,
+.slide-content ol {
+  max-width: 33em;
+}
+
+.slide-type-1 {
+  background: #fff;
+  color: #444;
+}
+
