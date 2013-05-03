@@ -6,6 +6,11 @@ body {
   line-height: 1.5;
 }
 
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
 ul {
   padding-left: 24px;
 }
@@ -14,16 +19,26 @@ li {
 }
 
 .header {
+  background: #cc4e3f;
+  color: #fff;
+  height: 500px;
+}
+.header > h1 {
+  margin: 20px;
+  position: absolute;
+}
+
+.forward {
   background: #E8EEEE;
   color: #555;
-  height: 500px;
+  height: 460px;
   padding: 20px;
 }
-.header h1 {
+.forward h1 {
   margin: 0 0 12px;
 }
-.header > p,
-.header > ul {
+.forward > p,
+.forward > ul {
   margin: 0 0 6px;
   width: 300px;
 }

@@ -8,6 +8,9 @@ scripts:
   - './demo/demo.js'
 ---
 <header class="header">
+  <h1>If you want physical interactions,<br/> you need to model physics.</h1>
+</header>
+<section class="forward">
   <h1>Spring physics explorations</h1>
   <p>CSS animations are bounded by a fixed <b>time</b> and use <a href="http://matthewlein.com/ceaser/">Bezier curves</a> to describe animation easing.</p>
 
@@ -31,7 +34,7 @@ scripts:
 
   <p>The result feels, well... physical. Springs respond in very tangible ways &mdash;
   the velocity and distance of your actions are taken into account.</p>
-</header>
+</section>
 <section id="demo-1" class="demo">
   <aside class="demo-intro">
     <h1>Basic spring</h1>
