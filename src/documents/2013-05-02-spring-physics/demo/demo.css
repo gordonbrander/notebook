@@ -1,6 +1,32 @@
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+body {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 24px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+.header {
+  background: #E8EEEE;
+  color: #555;
+  height: 500px;
+  padding: 20px;
+}
+.header h1 {
+  margin: 0 0 12px;
+}
+.header > p,
+.header > ul {
+  margin: 0 0 6px;
+  width: 300px;
+}
 
 .demo {
   background: #222;
@@ -13,8 +39,6 @@
 
 .demo-intro {
   color: #fff;
-  font-size: 12px;
-  line-height: 1.5;
   padding: 20px;
   width: 200px;
 }
@@ -45,7 +69,7 @@
   background: dodgerblue;
   left: 0;
   position: absolute;
-  top: 200px;
+  top: 250px;
   width: 100px;
   height: 100px;
 }

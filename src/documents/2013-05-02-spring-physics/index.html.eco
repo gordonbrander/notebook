@@ -7,6 +7,31 @@ scripts:
   - './spring/spring.js'
   - './demo/demo.js'
 ---
+<header class="header">
+  <h1>Spring physics explorations</h1>
+  <p>CSS animations are bounded by a fixed <b>time</b> and use <a href="http://matthewlein.com/ceaser/">Bezier curves</a> to describe animation easing.</p>
+
+  <pre><code>.animated {
+  transition: left 500ms cubic-bezier(0.000, 0.405, 0.000, 1.285);
+}</code></pre>
+
+  <p>This approach has a couple of interesting limitations:</p>
+
+  <ul>
+    <li>When resources become scarce, browsers have to drop animation frames to
+    make sure they deliver an animation on-time. This results in choppy animations.</li>
+    <li>A single Cubic Bezier can only describe a single curve, meaning "bounciness"
+    ain't gonna happen.</li>
+  </ul>
+
+  <p><b>Spring physics</b> offers an interesting alternative. Rather than defining
+  an animation by time &amp; easing, springs define animations using
+  <b>tension</b>, <b>friction</b> and <b>mass</b>, simulating the reaction
+  <a href="http://en.wikipedia.org/wiki/Hooke%27s_law">a real spring</a> would have.</p>
+
+  <p>The result feels, well... physical. Springs respond in very tangible ways &mdash;
+  the velocity and distance of your actions are taken into account.</p>
+</header>
 <section id="demo-1" class="demo">
   <aside class="demo-intro">
     <h1>Basic spring</h1>
@@ -18,7 +43,9 @@ scripts:
 <section id="demo-2" class="demo" style="position: static;">
   <aside class="demo-intro">
     <h1>Popover</h1>
-    <p>Click anywhere to open popover under mouse</p>
+    <p>Springs are useful for more than snapping to a location. They can also be used
+    as an animation curve algorithm.</p>
+    <p>Click anywhere to open popover under mouse.</p>
   </aside>
   <div id="demo-2-popover" class="popover">
     <ul class="popover-items">
@@ -45,7 +72,7 @@ scripts:
 <section id="demo-4" class="demo" style="position: static;">
   <aside class="demo-intro">
     <h1>Radial menus</h1>
-    <p>Click anywhere to open popover under mouse.</p>
+    <p>Click anywhere to open radial menu under mouse.</p>
   </aside>
 
   <ul id="demo-4-radial" class="radial">
